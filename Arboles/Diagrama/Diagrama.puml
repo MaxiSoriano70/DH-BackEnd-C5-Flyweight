@@ -1,0 +1,17 @@
+@startuml
+class Arbol{
+    -alto : double
+    -ancho : double
+    -color : String
+    -tipoArbol : ETipoArbol
+    -{static} contador : int
+}
+
+ArbolFactory -l-> Arbol
+
+class ArbolFactory{
+    -poolArboles: HashMap
+    +obtenerArbol(ETipoArbol): Arbol
+}
+
+@enduml
